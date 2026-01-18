@@ -7,39 +7,56 @@
 </head>
 <body>
 
-<h2>Gerador de Release</h2>
+<div class="container">
+  <h1>Gerador de Release</h1>
 
-<label>Tipificação do fato</label>
-<input type="text" id="tipificacao">
+  <label>Tipificação do fato</label>
+  <input type="text" id="tipificacao" placeholder="Ex.: Prisão por tráfico ilícito de drogas">
 
-<label>Linha complementar (opcional)</label>
-<input type="text" id="linhaExtra">
+  <label>Linha complementar (opcional)</label>
+  <input type="text" id="linhaExtra">
 
-<label>Cidade - CRPO/Batalhão</label>
-<input type="text" id="cabecalho">
+  <label>Cidade - CRPO/Batalhão</label>
+  <input type="text" id="cabecalho" placeholder="Ex.: Porto Alegre - CPC/11ºBPM">
 
-<label>Data/Hora</label>
-<input type="text" id="dataHora">
+  <label>Data/Hora</label>
+  <input type="text" id="dataHora" placeholder="Ex.: 011230Abr24">
 
-<label>Local</label>
-<input type="text" id="local">
+  <label>Local</label>
+  <input type="text" id="local" placeholder="Rua, nº, bairro">
 
-<label>Preso / Autor</label>
-<input type="text" id="preso">
+  <label>Preso / Autor / Suspeito</label>
+  <input type="text" id="preso" placeholder="Nome completo, idade e RG/CPF/DN">
 
-<label>Antecedentes</label>
-<input type="text" id="antecedentesPreso">
+  <label>Antecedentes</label>
+  <input type="text" id="antecedentesPreso">
 
-<label>OrCrim</label>
-<input type="text" id="orcrimPreso">
+  <label>OrCrim</label>
+  <input type="text" id="orcrimPreso">
 
-<label>Material apreendido (um por linha)</label>
-<textarea id="material"></textarea>
+  <label>Vítima (opcional)</label>
+  <input type="text" id="vitima">
 
-<label>Resumo do fato</label>
-<textarea id="resumo"></textarea>
+  <label>Antecedentes da vítima</label>
+  <input type="text" id="antecedentesVitima">
 
-<button onclick="gerarDoc()">Gerar DOC</button>
+  <label>OrCrim da vítima</label>
+  <input type="text" id="orcrimVitima">
+
+  <label>Motivação (somente se aplicável)</label>
+  <input type="text" id="motivacao">
+
+  <label>Material apreendido (um item por linha)</label>
+  <textarea id="material"></textarea>
+
+  <label>Oficial ou graduado comunicado (se aplicável)</label>
+  <input type="text" id="oficial">
+
+  <label>Resumo do fato</label>
+  <textarea id="resumo"></textarea>
+
+  <button onclick="gerarDoc()">Gerar arquivo DOC</button>
+</div>
 
 <script src="docx.min.js"></script>
 <script src="script.js"></script>
