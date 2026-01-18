@@ -2,19 +2,46 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Meu primeiro site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-      padding: 50px;
-    }
-    h1 { color: #333; }
-  </style>
+  <title>Gerador de Release BM</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Meu site está no ar 🚀</h1>
-  <p>Criado gratuitamente com GitHub Pages.</p>
+
+<h2>Gerador de Release</h2>
+
+<label>Tipificação do fato</label>
+<input type="text" id="tipificacao">
+
+<label>Linha complementar (opcional)</label>
+<input type="text" id="linhaExtra">
+
+<label>Cidade - CRPO/Batalhão</label>
+<input type="text" id="cabecalho">
+
+<label>Data/Hora</label>
+<input type="text" id="dataHora">
+
+<label>Local</label>
+<input type="text" id="local">
+
+<label>Preso / Autor</label>
+<input type="text" id="preso">
+
+<label>Antecedentes</label>
+<input type="text" id="antecedentesPreso">
+
+<label>OrCrim</label>
+<input type="text" id="orcrimPreso">
+
+<label>Material apreendido (um por linha)</label>
+<textarea id="material"></textarea>
+
+<label>Resumo do fato</label>
+<textarea id="resumo"></textarea>
+
+<button onclick="gerarDoc()">Gerar DOC</button>
+
+<script src="docx.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
